@@ -11,8 +11,8 @@ The client stack is:
 - Tanstack Router
 - Better-Auth
 - Tanstack Query (upcoming)
-- TailwindCSS (upcoming)
-- Shadcn UI (upcoming)
+- TailwindCSS
+- Shadcn UI
 
 The server stack is:
 
