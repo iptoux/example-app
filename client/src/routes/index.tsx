@@ -81,6 +81,17 @@ const timelineData = [
     status: "completed" as const,
     energy: 100,
   },
+    {
+    id: 7,
+    title: "Tanstack Query",
+    date: "Planned",
+    content: "Data fetching and state management for React applications. Docs: https://tanstack.com/query",
+    category: "frontend",
+    icon: Clock,
+    relatedIds: [5],
+    status: "pending" as const,
+    energy: 0,
+  },
 ];
 
 function Index() {

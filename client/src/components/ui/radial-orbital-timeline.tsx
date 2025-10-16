@@ -179,8 +179,8 @@ export default function RadialOrbitalTimeline({
 
           <div className={`${compact ? "absolute w-96 h-96" : "absolute w-112 h-112"} rounded-full border border-border/30`}></div>
 
-          {(compact ? timelineData.slice(0, 6) : timelineData).map((item, index) => {
-            const total = compact ? Math.min(6, timelineData.length) : timelineData.length;
+          {(compact ? timelineData.slice(0, 7) : timelineData).map((item, index) => {
+            const total = compact ? Math.min(7, timelineData.length) : timelineData.length;
             const position = calculateNodePosition(index, total);
             const isExpanded = expandedItems[item.id];
             const isRelated = isRelatedToActive(item.id);
