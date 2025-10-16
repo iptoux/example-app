@@ -2,7 +2,15 @@ import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { signOut, useSession } from "../lib/auth-client";
 
+import '../styles.css'
+
 export const Route = createRootRoute({
+  head: () => ({
+    meta: [
+      // your meta tags and site config
+    ],
+    // other head config
+  }),
   component: RouteComponent,
 });
 
