@@ -4,6 +4,8 @@ import { RouterProvider, createRouter } from "@tanstack/react-router";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
+import { Toaster } from "./components/ui/sonner";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const router = createRouter({ routeTree });
 
@@ -19,7 +21,10 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <StrictMode>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
+      <Toaster />
+      </ThemeProvider>
     </StrictMode>
   );
 }
