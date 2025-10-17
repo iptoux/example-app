@@ -23,16 +23,12 @@ export const Footer: React.FC = () => {
               </svg>
               <span className="text-lg font-semibold">Example App</span>
               </div>
-              <a
-                href={GITHUB_REPO}
-                target="_blank"
-                rel="noreferrer"
+              <div
                 aria-label="View repository on GitHub"
                 className="inline-flex items-center gap-3 dark:text-secondary dark:hover:text-destructive hover:text-secondary-foreground"
               >
-              <span className="text-sm font-normal">(from <a href={GITHUB_REPO} target="_blank" rel="noreferrer" className="text-secondary hover:text-accent hover:underline">Catalinpit</a>)</span>
-                
-              </a>
+                <span className="text-sm font-normal">(from <a href={GITHUB_REPO} target="_blank" rel="noreferrer" className="text-secondary hover:text-accent hover:underline">Catalinpit</a>)</span>
+              </div>
             </div>
             <div className="md:ml-2">
               <p className="text-sm text-muted-foreground max-w-lg">A small example app with a C64-inspired theme by iptoux — download, inspect and reuse. Built for rapid development with modern web tools.</p>
