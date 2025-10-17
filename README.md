@@ -2,24 +2,31 @@
 
 # example-app
 
-<center>
-
-<p>
+<p align="center" width="100%">
     <img alt="TurboRepo" src="https://img.shields.io/badge/TurboRepo-000000?style=for-the-badge&logo=turborepo&logoColor=orange" />
+</p>
+
+<!-- Client stack badges -->
+<p align="center" width="100%">
 	<img alt="Vite" src="https://img.shields.io/badge/Vite-646cff?style=for-the-badge&logo=vite&logoColor=white" />
 	<img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
 	<img alt="TanStack Router" src="https://img.shields.io/badge/TanStack_Router-0ea5a4?style=for-the-badge&logo=react-router&logoColor=white" />
 	<img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
 	<img alt="shadcn/ui" src="https://img.shields.io/badge/shadcn--ui-111827?style=for-the-badge&logo=dotnet&logoColor=white" />
+
+</p>
+
+<!-- Server stack badges -->
+<p align="center" width="100%">
 	<img alt="Bun" src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" />
 	<img alt="Hono" src="https://img.shields.io/badge/Hono-06b6d4?style=for-the-badge&logo=cloudflare&logoColor=white" />
 	<img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-31648f?style=for-the-badge&logo=postgresql&logoColor=white" />
 	<img alt="Prisma" src="https://img.shields.io/badge/Prisma-2b6cb0?style=for-the-badge&logo=prisma&logoColor=white" />
 	<img alt="Better-Auth" src="https://img.shields.io/badge/Better--Auth-0f172a?style=for-the-badge&logo=better-auth&logoColor=white" />
 </p>
-
+<p align="center" width="100%">
 <img width="800" height="553" alt="image" src="https://github.com/user-attachments/assets/c52a5298-d2d0-4be0-9239-14497e7d666c" />
-</center>
+</p>
 
 ---
 
