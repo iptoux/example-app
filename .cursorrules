@@ -31,5 +31,5 @@ bunx --bun turbo@latest
 Use the latest version of Shadcn to install new components into the client app. Example (add a button component to the `apps/client` package):
 
 ```
-bunx --bun shadcn@latest add button --filter=apps/client
+bunx --bun shadcn@latest add button --cwd=apps/client
 ```
