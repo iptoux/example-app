@@ -1,7 +1,35 @@
+# turborepo instructions (Bun)
+
+Short turborepo usage for automated agents (project uses Bun):
+
+- Use Bun to install dependencies and run package binaries.
+- Use Turbo to run tasks across the monorepo (build, dev, lint, test).
+
+Examples (PowerShell):
+
+```
+bun install
+bunx turbo run build --filter=apps/*
+bunx turbo dev --filter=apps/client
+bunx turbo run lint test --parallel
+```
+
+Notes:
+- Use `--filter` to target packages (e.g. `--filter=apps/*` or `--filter=apps/client`).
+- Prefer `bunx` or `bun run` to invoke binaries installed in the repo.
+
+Keep commands short and target specific packages when possible.
+
+Install Turbo (if not present):
+
+```
+bunx --bun turbo@latest
+```
+
 # shadcn instructions
 
-Use the latest version of Shadcn to install new components, like this command to add a button component:
+Use the latest version of Shadcn to install new components into the client app. Example (add a button component to the `apps/client` package):
 
-```bash
-bunx --bun shadcn@latest add button
+```
+bunx --bun shadcn@latest add button --filter=apps/client
 ```

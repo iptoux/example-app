@@ -1,4 +1,4 @@
-import { Role } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 
@@ -26,9 +26,12 @@ export const auth = betterAuth({
   user: {
     additionalFields: {
       roles: {
-        type: [Role.STUDENT, Role.CREATOR, Role.ADMIN],
+        // Use string literals for enum values to avoid runtime named-export differences
+        // (e.g. bundling differences in the installed @prisma/client). These match
+        // the `Role` enum members defined in Prisma schema.
+        type: ["STUDENT", "CREATOR", "ADMIN"],
         required: true,
-        defaultValue: [Role.STUDENT],
+        defaultValue: ["STUDENT"],
       },
     },
   },
