@@ -2,7 +2,7 @@
   "name": "server",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "build": "prisma generate && bun build --outdir dist --target bun",
+    "build": "prisma generate && bun build src/index.ts --outdir dist --target bun",
     "check-types": "tsc --noEmit",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
