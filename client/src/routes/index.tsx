@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Calendar, Clock, Code, FileText, User, Info } from "lucide-react";
+import { Calendar, Clock, Code, FileText, User } from "lucide-react";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 export const Route = createFileRoute("/")({
