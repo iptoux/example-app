@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Link, Zap } from "lucide-react";
+import { ArrowRight, Link, Zap, Info } from "lucide-react";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -159,7 +160,21 @@ export default function RadialOrbitalTimeline({
       ref={containerRef}
       onClick={handleContainerClick}
     >
-  <div className="relative w-full h-full flex items-center justify-center">
+    <div className="relative w-full h-full flex items-center justify-center">
+        {/* Info icon overlay positioned bottom-right inside the orbit container */}
+        <div className="absolute right-4 bottom-4 z-[999]">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                aria-label="Mehr Informationen: Items im RadialOrbit sind anklickbar"
+                className="inline-flex items-center justify-center rounded-full p-2 bg-muted/70 hover:bg-muted transition-colors text-foreground/80 shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <Info size={16} />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent sideOffset={6}>Items im RadialOrbit sind anklickbar</TooltipContent>
+          </Tooltip>
+        </div>
         <div
           className="absolute w-full h-full flex items-center justify-center"
           ref={orbitRef}

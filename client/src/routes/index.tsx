@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Calendar, Clock, Code, FileText, User } from "lucide-react";
+import { Calendar, Clock, Code, FileText, User, Info } from "lucide-react";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 export const Route = createFileRoute("/")({
@@ -208,7 +208,7 @@ function Index() {
           <div className="space-y-12">
             {/* Hero Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 min-h-[36rem]">
-              <div className="order-2 md:order-1 text-center md:text-left space-y-6">
+              <div className="order-2 md:order-1 text-center md:text-left space-y-6 relative">
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/90 to-primary/80 bg-clip-text text-transparent">
                   Welcome to ExampleApp
                 </h1>
