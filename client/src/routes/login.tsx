@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Spinner } from "@/components/ui/spinner";
+import { Github } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
  
@@ -99,8 +100,32 @@ function RouteComponent() {
   //   );
   // };
 
+  const handleSocialLogin = async (provider: 'google' | 'github') => {
+    setIsLoading(true);
+    try {
+      await signIn.social(
+        { provider },
+        {
+          onSuccess: () => {
+            toast.success('Signed in successfully');
+            navigate({ to: '/' });
+          },
+          onError: (error) => {
+            console.error(error);
+            toast.error(getErrorMessage(error));
+          },
+        }
+      );
+    } catch (err: unknown) {
+      console.error(err);
+      toast.error(getErrorMessage(err));
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/20 p-4">
+        <div className="min-h-[calc(80vh-4rem)] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <Card className="shadow-2xs border-border/50 backdrop-blur-sm bg-card/95">
           <CardHeader className="space-y-1 text-center">
@@ -194,6 +219,37 @@ function RouteComponent() {
               </div>
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <Button
+                onClick={() => handleSocialLogin('github')}
+                variant="outline"
+                size="lg"
+                className="w-full"
+                aria-label="Sign in with GitHub"
+                disabled={isLoading}
+              >
+                <Github className="size-4" />
+                GitHub
+              </Button>
+
+              <Button
+                onClick={() => handleSocialLogin('google')}
+                variant="outline"
+                size="lg"
+                className="w-full"
+                aria-label="Sign in with Google"
+                disabled={isLoading}
+              >
+                {/* Google G logo */}
+                <svg className="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <path d="M23.5 12.25c0-.83-.07-1.63-.2-2.4H12v4.55h6.36c-.27 1.43-1.09 2.64-2.34 3.45v2.86h3.78c2.21-2.04 3.6-5.03 3.6-8.46z" fill="#4285F4"/>
+                  <path d="M12 24c3.24 0 5.96-1.07 7.95-2.9l-3.78-2.86c-1.05.7-2.4 1.12-4.17 1.12-3.2 0-5.91-2.16-6.88-5.07H1.24v2.99C3.2 21.7 7.33 24 12 24z" fill="#34A853"/>
+                  <path d="M5.12 14.29A7.2 7.2 0 0 1 4.6 12c0-.83.14-1.63.5-2.37V6.64H1.24A11.99 11.99 0 0 0 0 12c0 1.94.46 3.77 1.24 5.36l3.88-3.07z" fill="#FBBC05"/>
+                  <path d="M12 4.77c1.76 0 3.34.6 4.58 1.77l3.44-3.44C17.95 1.13 15.23 0 12 0 7.33 0 3.2 2.3 1.24 5.64l3.88 2.99C6.09 6.93 8.8 4.77 12 4.77z" fill="#EA4335"/>
+                </svg>
+                Google
+              </Button>
+            </div>
             <div className="text-center">
               <p className="text-sm text-muted-foreground">
                 Don't have an account?{' '}
