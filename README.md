@@ -13,6 +13,7 @@ The client stack is:
 - Tanstack Query (upcoming)
 - TailwindCSS
 - Shadcn UI
+- Comprehensive Tailwindcss Theme: C64
 
 The server stack is:
 
