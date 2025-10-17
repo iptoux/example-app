@@ -2,9 +2,15 @@
 
 # example-app
 
+<center>
+<img width="800" height="553" alt="image" src="https://github.com/user-attachments/assets/c52a5298-d2d0-4be0-9239-14497e7d666c" />
+</center>
+
+---
+
 This application uses a client - server architecture.
 
-The client stack is:
+### The client stack is:
 
 - Vite
 - React
@@ -15,7 +21,7 @@ The client stack is:
 - Shadcn UI
 - Comprehensive Tailwindcss Theme: C64
 
-The server stack is:
+### The server stack is:
 
 - Bun
 - Hono
